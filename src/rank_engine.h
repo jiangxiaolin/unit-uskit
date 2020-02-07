@@ -31,10 +31,10 @@ public:
     RankEngine(RankEngine&&) = default;
     ~RankEngine();
 
-    // Initialize rank engine from configuration.
+    // Initialize rank engine from configuration.  排序引擎
     // Returns 0 on success, -1 otherwise.
     int init(const RankEngineConfig& config);
-    // Rank candidates with specified rank rule.
+    // Rank candidates with specified rank rule.  run方法返回排序结果
     // Returns 0 on success, -1 otherwise.
     int run(const std::string& name, RankCandidate& rank_candidate,
             RankResult& rank_result, expression::ExpressionContext& context) const;
