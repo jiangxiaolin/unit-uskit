@@ -33,18 +33,18 @@ public:
     UnifiedSchedulerManager();
     ~UnifiedSchedulerManager();
 
-    // Initialize all unified schedulers from configuration.
+    // Initialize all unified schedulers from configuration.  初始化所有的统一调度器
     // Returns 0 on success, -1 otherwise.
     int init(const UnifiedSchedulerConfig &config);
-    // Process user request.
+    // Process user request.  处理用户请求，成功返回 0 反之返回-1
     // Returns 0 on success, -1 otherwise.
     int run(BRPC_NAMESPACE::Controller* cntl);
 
 private:
-    // Parse user request from HTTP POST body(JSON format).
+    // Parse user request from HTTP POST body(JSON format). 解析用户请求
     // Returns 0 on success, -1 otherwise.
     int parse_request(BRPC_NAMESPACE::Controller* cntl, USRequest& request);
-    // Assemble and send response(HTTP+JSON) back to user.
+    // Assemble and send response(HTTP+JSON) back to user.  集成并发送回复给用户
     // Returns 0 on success, -1 otherwise.
     int send_response(BRPC_NAMESPACE::Controller* cntl, USResponse* response,
                       ErrorCode error_code = ErrorCode::OK, const std::string& error_msg = "");
