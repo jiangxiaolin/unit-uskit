@@ -31,14 +31,14 @@ public:
     UnifiedScheduler();
     UnifiedScheduler(UnifiedScheduler&&) = default;
     virtual ~UnifiedScheduler();
-    // Initialize unified scheduler from configuration.
+    // Initialize unified scheduler from configuration. 初始化单个统一调度器
     // Returns 0 on success, -1 otherwise.
     int init(const std::string& root_dir, const std::string& usid);
     // Process user request and generate response.
     // Returns 0 on success, -1 otherwise.
     int run(USRequest& request, USResponse& response) const;
 
-private:
+private://每一个统一调度器中，都包含三个策略 分别代表 召回 排序  流程管理
     BackendEngine _backend_engine;
     RankEngine _rank_engine;
     FlowEngine _flow_engine;
