@@ -33,7 +33,7 @@ public:
     // Initialize backend engine from configuration.
     // Returns 0 on success, -1 otherwise.
     int init(const BackendEngineConfig& config);
-    // Recall specified backend services in parallel.
+    // Recall specified backend services in parallel. 同时召回特定后台服务
     // Returns 0 on success, -1 otherwise.
     int run(const std::vector<std::string>& recall_services,
             expression::ExpressionContext& context) const;
