@@ -48,7 +48,7 @@ public:
     // Returns 0 on success, -1 otherwise.
     int parse_response();
 
-    // Obtain the associated backend service
+    // Obtain the associated backend service 获取相关联后台服务
     const std::string& service_name() const;
     // Obtain the BRPC_NAMESPACE::Controller associated with this backend controller
     BRPC_NAMESPACE::Controller& brpc_controller();
@@ -60,7 +60,7 @@ public:
     int set_call_ids(const std::vector<CallIdPriorityPair>& cntls_call_ids);
     // Obtain the call ids with priority
     const std::vector<CallIdPriorityPair>& get_call_ids() const;
-    // Set cancel order
+    // Set cancel order 
     int set_cancel_order(const std::string& cancel_order);
     // Obtain cancel order
     const std::string& get_cancel_order() const;
