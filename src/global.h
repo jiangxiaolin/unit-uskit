@@ -17,7 +17,7 @@
 
 namespace uskit {
 
-// For regisering global functions.
+// For regisering global functions.   用于全局函数的注册
 void register_function();
 
 // For regisering global backend policies, rank policies and flow policies.
