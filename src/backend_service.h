@@ -47,7 +47,7 @@ public:
             BackendController* cntl,
             const std::unordered_map<std::string, FlowConfig>* flow_map,
             const RankEngine* rank_engine) const;
-    // Parse response received from RPC
+    // Parse response received from RPC   解析回复
     // Returns 0 on success, -1 otherwise.
     int parse_response(BackendController* cntl) const;
 
