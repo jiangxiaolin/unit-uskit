@@ -26,7 +26,7 @@ namespace uskit {
 
 typedef std::unique_ptr<expression::Expression> Expr;
 
-// Key-expression mapping.
+// Key-expression mapping.  键和表达式的映射
 class KEMap {
 public:
     KEMap() {}
