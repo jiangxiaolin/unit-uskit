@@ -25,13 +25,13 @@ namespace uskit {
 UnifiedSchedulerManager::UnifiedSchedulerManager() {}
 
 UnifiedSchedulerManager::~UnifiedSchedulerManager() {}
-
+//初始化方法
 int UnifiedSchedulerManager::init(const UnifiedSchedulerConfig& config) {
-    // Register global functions and policies
+    // Register global functions and policies  函数策略的注册到系统中
     register_function();
     register_policy();
 
-    // Load unified schedulers that are specified in configuration.
+    // Load unified schedulers that are specified in configuration.  加载初始化调度器
     for (int i = 0; i < config.load_size(); ++i) {
         const std::string& usid = config.load(i);
         UnifiedScheduler us;
@@ -92,7 +92,7 @@ int UnifiedSchedulerManager::run(BRPC_NAMESPACE::Controller* cntl) {
 
     return 0;
 }
-
+//解析请求参数
 int UnifiedSchedulerManager::parse_request(BRPC_NAMESPACE::Controller* cntl, USRequest& request) {
     std::string request_json = cntl->request_attachment().to_string();
     // Parse request parameters from JSON.
@@ -174,7 +174,7 @@ int UnifiedSchedulerManager::parse_request(BRPC_NAMESPACE::Controller* cntl, USR
 
     return 0;
 }
-
+//发送回复
 int UnifiedSchedulerManager::send_response(
         BRPC_NAMESPACE::Controller* cntl,
         USResponse* response,
