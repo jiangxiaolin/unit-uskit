@@ -24,7 +24,7 @@ namespace rank {
 
 // Default rank policy.
 class DefaultPolicy : public RankPolicy {
-public:
+public://初始化方法 和  run方法  候选 候选结构及表达式
     int init(const RankNodeConfig& config);
     int run(RankCandidate& rank_candidate, RankResult& rank_result,
             expression::ExpressionContext& context) const;
