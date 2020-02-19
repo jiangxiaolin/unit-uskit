@@ -27,7 +27,7 @@ int DefaultPolicy::init(const RankNodeConfig& config) {
     }
     return 0;
 }
-
+//还是依赖于配置文件进行排序  没有很干货的内容
 int DefaultPolicy::run(RankCandidate& rank_candidate, RankResult& rank_result,
                        expression::ExpressionContext& context) const {
     if (_rank_config.run(rank_candidate, rank_result, context) != 0) {
